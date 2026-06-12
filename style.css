@@ -1,0 +1,167 @@
+/* Configurações Gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f9f4;
+    color: #333;
+}
+
+header {
+    background-color: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 2rem 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Layout Principal */
+.container {
+    max-width: 1100px;
+    margin: 2rem auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+sections, .controls, .greenhouse-view {
+    background: white;
+    flex: 1;
+    min-width: 300px;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #1b5e20;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #a5d6a7;
+    padding-bottom: 0.5rem;
+}
+
+/* Painel de Controle */
+.control-group {
+    margin-bottom: 1.5rem;
+    background: #f1f8e9;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #388e3c;
+}
+
+input[type="range"] {
+    width: 100%;
+    accent-color: #4caf50;
+}
+
+.status {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.on { color: #2e7d32; font-weight: bold; }
+.off { color: #c62828; font-weight: bold; }
+
+.sustentabilidade {
+    background-color: #e8f5e9;
+    border-left: 5px solid #2e7d32;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Visualização da Estufa */
+.estufa-box {
+    position: relative;
+    height: 350px;
+    background-color: #e0f2f1;
+    border: 4px solid #80cbc4;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+/* Efeitos Visuais */
+.efeito {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    transition: background 0.5s;
+}
+
+.chuva-ativa {
+    background: linear-gradient(rgba(0,0,255,0.05), rgba(0,0,255,0.15));
+    border-bottom: 5px solid #2196f3;
+}
+
+.luz-ativa {
+    background-color: rgba(255, 235, 59, 0.2);
+}
+
+/* Legumes */
+.legumes-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 2rem;
+    z-index: 2;
+}
+
+.legume {
+    font-size: 3rem;
+    text-align: center;
+    transition: transform 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nome-legume {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 0.5rem;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #1b5e20;
+    color: white;
+    margin-top: 3rem;
+}

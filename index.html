@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrinho 2026 - Estufa Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Estufa Inteligente & Sustentável</h1>
+        <p>Concurso Agrinho 2026: Agro Forte, Futuro Saudável</p>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <h2>Painel de Controle</h2>
+            
+            <div class="control-group">
+                <label for="water-btn">Irrigação Automatizada:</label>
+                <button id="water-btn" onclick="toggleRegar()">Ligar Regadores</button>
+                <p class="status">Status: <span id="water-status" class="off">Desligado</span></p>
+            </div>
+
+            <div class="control-group">
+                <label for="temp-range">Temperatura Ideal (20°C a 30°C):</label>
+                <input type="range" id="temp-range" min="10" max="45" value="25" oninput="atualizarTemperatura(this.value)">
+                <p class="status">Temperatura: <span id="temp-val">25°C</span></p>
+            </div>
+
+            <div class="control-group">
+                <label for="light-btn">Luz Solar LED (Energia Solar):</label>
+                <button id="light-btn" onclick="toggleLuz()">Ligar Luzes</button>
+                <p class="status">Status: <span id="light-status" class="off">Desligado</span></p>
+            </div>
+
+            <div class="sustentabilidade">
+                <h3>Impacto Sustentável</h3>
+                <p id="feedback">Ajuste os controles para otimizar o crescimento dos legumes com o menor gasto de água e energia!</p>
+            </div>
+        </section>
+
+        <section class="greenhouse-view">
+            <h2>Visualização da Estufa</h2>
+            <div id="estufa-ambiente" class="estufa-box">
+                <div id="efeito-agua" class="efeito"></div>
+                <div id="efeito-luz" class="efeito"></div>
+                
+                <div class="legumes-container">
+                    <div class="legume" id="legume-1">🌱<span class="nome-legume">Tomate</span></div>
+                    <div class="legume" id="legume-2">🌱<span class="nome-legume">Alface</span></div>
+                    <div class="legume" id="legume-3">🌱<span class="nome-legume">Cenoura</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Equilíbrio entre produção e meio ambiente — Projeto Agrinho 2026</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
